@@ -16,6 +16,6 @@ gem 'unicorn'
 group :development, :test do
   gem 'pry-rails'
   gem 'pry'
-  gem 'better-errors'
+  gem 'better_errors'
   gem 'binding_of_caller'
 end

@@ -1,6 +1,4 @@
 == elt
-This application was created for Tokyu.rb.
-
-You can choose and vote the LT, food, sake you like the best! :beer: :computer: :meat_with_bone:
+This application was created for Tokyu.rb. Using this, you can choose and vote the LT, food, and sake you like the best! :beer: :computer: :meat_on_bone:
 
 It will be available on November 29th, at TokyuRubyKaigi08.

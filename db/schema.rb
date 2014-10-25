@@ -17,4 +17,6 @@ ActiveRecord::Schema.define(version: 20141025085130) do
   end
 
   add_index "votes", ["attendee_id"], name: "index_votes_on_attendee_id", unique: true
+  add_index "votes", ["target_type"], name: "index_votes_on_target_type"
+
 end

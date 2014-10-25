@@ -1,8 +1,6 @@
 %h1 Menu
 %p Select menu below.
 
-= link_to 'aaa', new_vote_path
- 
-= link_to 'bbb', new_vote_path
-
-= link_to 'ccc', new_vote_path
+-# TODO それぞれのモデルのクラスメソッドで名称を返すようにするか、Yaml 使う。モデル作るときに決める
+- %w(LT food sake).each do |target|
+  = link_to "vote #{target}", new_vote_path

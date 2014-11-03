@@ -30,6 +30,6 @@ class VotesController < ApplicationController
   end
 
   def set_targets
-    @targets = Target.find_by(target_type: params[:target_type])
+    @targets = Target.where(target_type: params[:target_type])
   end
 end

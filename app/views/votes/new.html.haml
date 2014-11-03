@@ -1,2 +1,5 @@
-%h1 Vote#new
-%p Find me in app/views/vote/new.html.haml
+%h1 new vote
+
+= render 'form', button_label: 'vote'
+
+%div= link_to 'Top', targets_path

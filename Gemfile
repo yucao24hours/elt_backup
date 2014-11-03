@@ -14,6 +14,10 @@ gem 'spring',        group: :development
 gem 'unicorn'
 gem 'haml-rails'
 
+group :development do
+  gem 'quiet_assets'
+end
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry'

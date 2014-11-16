@@ -1,7 +1,7 @@
 ActiveRecord::Schema.define(version: 20141116131815) do
   create_table "vote_targets", force: true do |t|
     t.string   "title"
-    t.string   "vote_target_type"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

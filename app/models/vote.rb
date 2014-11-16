@@ -1,3 +1,3 @@
 class Vote < ActiveRecord::Base
-  belongs_to :vote_target
+  belongs_to :target, class_name: 'VoteTarget'
 end

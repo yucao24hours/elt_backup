@@ -1,7 +1,7 @@
 class VotesController < ApplicationController
   def new
     @vote = Vote.new
-    @vote_targets = VoteTarget.where(vote_target_type: params[:vote_target])
+    @vote_targets = VoteTarget.where(type: params[:vote_target])
   end
 
   def create

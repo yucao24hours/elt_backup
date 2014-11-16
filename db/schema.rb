@@ -7,7 +7,7 @@ ActiveRecord::Schema.define(version: 20141116131815) do
   end
 
   create_table "votes", force: true do |t|
-    t.integer  "attendee_id", null: false
+    t.integer  "attendee_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "comment"

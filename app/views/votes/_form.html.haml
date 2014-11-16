@@ -4,11 +4,10 @@
 
 = form_for(@vote) do |f|
   %ul
-    -# @targets.each do |target|
+    - @vote_targets.each do |vote_target|
       %li
-        = f.radio_button 
-        = target.title
-        = target.attendee.name
+        = f.radio_button :vote_target_id, vote_target.id
+        = vote_target.title
 
   %div
     = f.label 'Comment(option)'

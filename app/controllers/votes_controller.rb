@@ -1,6 +1,7 @@
 class VotesController < ApplicationController
   def new
     @vote = Vote.new
+    @vote_targets = VoteTarget.where(vote_target_type: params[:vote_target])
   end
 
   def create
@@ -26,7 +27,7 @@ class VotesController < ApplicationController
   private
 
   def vote_params
-    params.require(:vote).permit(:vote_target_name, :attendee_id, :comment)
+    params.require(:vote).permit(:attendee_id, :comment, :vote_target_id, :vote_target_type)
   end
 
   def set_vote_targets

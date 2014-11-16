@@ -7,7 +7,6 @@ ActiveRecord::Schema.define(version: 20141116131815) do
   end
 
   create_table "votes", force: true do |t|
-    t.string   "target_type", null: false
     t.integer  "attendee_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -16,6 +15,5 @@ ActiveRecord::Schema.define(version: 20141116131815) do
   end
 
   add_index "votes", ["attendee_id"], name: "index_votes_on_attendee_id", unique: true
-  add_index "votes", ["target_type"], name: "index_votes_on_target_type"
 
 end

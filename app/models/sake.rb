@@ -1,0 +1,2 @@
+class Sake < VoteTarget
+end

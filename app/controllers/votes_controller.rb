@@ -27,7 +27,7 @@ class VotesController < ApplicationController
   private
 
   def vote_params
-    params.require(:vote).permit(:attendee_id, :comment, :vote_target_id, :vote_target_type)
+    params.require(:vote).permit(:attendee_id, :comment, :vote_target_id)
   end
 
   def set_vote_targets

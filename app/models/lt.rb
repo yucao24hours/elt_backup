@@ -1,0 +1,2 @@
+class Lt < VoteTarget
+end

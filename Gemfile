@@ -15,6 +15,7 @@ gem 'unicorn'
 gem 'haml-rails'
 
 group :development do
+  gem 'xray-rails'
   gem 'quiet_assets'
 end
 

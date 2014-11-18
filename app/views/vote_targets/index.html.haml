@@ -2,5 +2,5 @@
 %p Select menu below.
 
 -# TODO それぞれのモデルのクラスメソッドで名称を返すようにするか、Yaml 使う。モデル作るときに決める
-- %w(LT FOOD SAKE).each do |target|
-  = link_to "vote #{target}", new_vote_path
+- %w(Lt Sake Food).each do |vote_target|
+  = link_to "vote #{vote_target}", new_vote_path(vote_target: vote_target)

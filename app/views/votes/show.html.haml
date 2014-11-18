@@ -1,2 +1,10 @@
-%h1 Vote#show
-%p Find me in app/views/vote/show.html.haml
+%h1 Your vote
+%div
+  you voted to:
+  = @vote.target.title
+
+%div
+  comment:
+  = @vote.comment
+
+%div= link_to 'Top', vote_targets_path

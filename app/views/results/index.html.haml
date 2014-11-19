@@ -1,2 +1,10 @@
-%h1 Results#index
-%p Find me in app/views/results/index.html.haml
+%h1 Results
+%div
+  - @results.each.with_index(1) do |result, i|
+    %div
+      -#TODO ひとまず順位をリンクにしてるけど、あとでタイトルをリンクにする。
+      = link_to "#{i}位", result_path(result)
+      =# result.title
+      =# by #{result.attendee.nickname}
+
+-#NOTE ここは TOP へのリンクは入れなくてもいいかなと思った。もう戻る意味ないし。

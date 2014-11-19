@@ -24,9 +24,6 @@ class VotesController < ApplicationController
   def update
   end
 
-  def result
-  end
-
   private
 
   def vote_params

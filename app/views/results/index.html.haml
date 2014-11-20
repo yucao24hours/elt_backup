@@ -2,7 +2,7 @@
 .votes
   - @votes.each do |key, vote|
     .vote
-      =#XXX: VoteTarget.find(key) って連続してるのがカッコわるい。
-      = link_to "#{vote.count}票 #{VoteTarget.find(key).title}", result_path(VoteTarget.find(key))
+      - target = VoteTarget.find(key)
+      = link_to "#{vote.count}票 #{target.title}", result_path(target)
 
 -#NOTE ここは TOP へのリンクは入れなくてもいいかなと思った。もう戻る意味ないし。

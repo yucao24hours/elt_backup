@@ -1,10 +1,8 @@
-%h1 Results
+%h1 #{@type} result
 %div
-  - @results.each.with_index(1) do |result, i|
+  - @votes.each do |key, vote|
     %div
-      -#TODO ひとまず順位をリンクにしてるけど、あとでタイトルをリンクにする。
-      = link_to "#{i}位", result_path(result)
-      =# result.title
-      =# by #{result.attendee.nickname}
+      =#XXX: VoteTarget.find(key) って連続してるのがカッコわるい。
+      = link_to "#{vote.count}票 #{VoteTarget.find(key).title}", result_path(VoteTarget.find(key))
 
 -#NOTE ここは TOP へのリンクは入れなくてもいいかなと思った。もう戻る意味ないし。

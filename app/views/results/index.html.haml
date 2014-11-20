@@ -1,8 +1,7 @@
 %h1 #{@type} result
 .votes
-  - @votes.each do |key, vote|
+  - @targets.each do |target|
     .vote
-      - target = VoteTarget.find(key)
-      = link_to "#{vote.count}票 #{target.title}", result_path(target)
+      = link_to "#{target.votes.count}票 #{target.title}", result_path(target)
 
 -#NOTE ここは TOP へのリンクは入れなくてもいいかなと思った。もう戻る意味ないし。

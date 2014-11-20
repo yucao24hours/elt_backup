@@ -1,8 +1,8 @@
 class ResultsController < ApplicationController
   def index
-    v = Vote.vote_to(params[:target_type])
-    @votes = v.group_by {|vote| vote.vote_target_id}
-    @type  = params[:target_type]
+    targets  = params[:target_type].classify.constantize.all
+    @targets = targets.sort {|p, n| n.votes.count <=> p.votes.count}
+    @type    = params[:target_type]
   end
 
   def show

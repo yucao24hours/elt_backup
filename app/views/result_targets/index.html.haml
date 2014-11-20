@@ -1,0 +1,6 @@
+%h1 Result menu
+%p Select the target below.
+
+-# TODO それぞれのモデルのクラスメソッドで名称を返すようにするか、Yaml 使う。モデル作るときに決める
+- %w(Lt Sake Food).each do |target|
+  = link_to "show #{target}", results_path(target_type: target)

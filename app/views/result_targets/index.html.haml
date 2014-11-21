@@ -1,0 +1,6 @@
+%h1 Result menu
+%p Select the target below.
+
+-#TODO i18n 対応をいつかやる
+- %w(Lt Sake Food).each do |target|
+  = link_to "show #{target}", results_path(target_type: target)

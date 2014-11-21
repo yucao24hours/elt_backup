@@ -1,6 +1,6 @@
-%h1 Menu
+%h1 Vote menu
 %p Select menu below.
 
--# TODO それぞれのモデルのクラスメソッドで名称を返すようにするか、Yaml 使う。モデル作るときに決める
+-# TODO i18n 対応をいつかやる
 - %w(Lt Sake Food).each do |vote_target|
   = link_to "vote #{vote_target}", new_vote_path(vote_target: vote_target)

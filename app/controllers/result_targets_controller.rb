@@ -1,0 +1,2 @@
+class ResultTargetsController < ApplicationController
+end

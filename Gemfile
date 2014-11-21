@@ -17,6 +17,7 @@ gem 'devise'
 gem 'rails_admin'
 
 group :development do
+  gem 'rb-readline'
   gem 'xray-rails'
   gem 'quiet_assets'
 end

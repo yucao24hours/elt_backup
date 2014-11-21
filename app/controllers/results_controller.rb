@@ -1,7 +1,8 @@
 class ResultsController < ApplicationController
   def index
-    targets  = params[:target_type].classify.constantize.all
-    @targets = targets.sort {|p, n| n.votes.count <=> p.votes.count}
+    #NOTE: params[:target_type] は、Lt Sake Food いずれかの文字列
+    vote_targets  = params[:target_type].classify.constantize.all
+    @targets = vote_targets.sort {|p, n| n.votes.count <=> p.votes.count}
     @type    = params[:target_type]
   end
 

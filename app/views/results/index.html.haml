@@ -2,6 +2,6 @@
 .votes
   - @targets.each do |target|
     .vote
-      = link_to "#{target.votes.count}票 #{target.title}", result_path(target)
+      = link_to "#{target.votes.count}票 #{target.title} by #{target.attendee.nickname}", result_path(target)
 
 -#NOTE ここは TOP へのリンクは入れなくてもいいかなと思った。もう戻る意味ないし。

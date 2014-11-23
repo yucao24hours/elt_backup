@@ -1,11 +1,15 @@
 class Attendee < ActiveRecord::Base
   class << self
-    def create_with_omniauth(auth)
-      create! do |attendee|
-        attendee.nickname = auth['info']['nickname']
-        attendee.uid      = auth['uid']
-        attendee.provider = auth['provider']
-      end
+    def find_or_create_with_omniauth(auth)
+      params = {
+        nickname: auth['info']['nickname'],
+        uid:      auth['uid'],
+        provider: auth['provider']
+      }
+      attendee = Attendee.where(provider: params[:provider], uid: params[:uid]).first_or_initialize
+      attendee.attributes = params
+      attendee.save!
+      attendee
     end
   end
 end

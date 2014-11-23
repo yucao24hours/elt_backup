@@ -1,4 +1,12 @@
-ActiveRecord::Schema.define(version: 20141118165222) do
+ActiveRecord::Schema.define(version: 20141123005533) do
+  create_table "attendees", force: true do |t|
+    t.string   "nickname"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "vote_targets", force: true do |t|
     t.string   "title"
     t.string   "type"
@@ -30,5 +38,4 @@ ActiveRecord::Schema.define(version: 20141118165222) do
   end
 
   add_index "yamatojis", ["email"], name: "index_yamatojis_on_email", unique: true
-
 end

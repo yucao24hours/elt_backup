@@ -1,0 +1,8 @@
+- if flash[:notice]
+  %p
+    = flash[:notice]
+
+%p
+  = link_to 'Sign in with Github', '/auth/github'
+%p
+  = link_to 'Sign in with Twitter', '/auth/twitter'

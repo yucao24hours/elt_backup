@@ -1,2 +1,4 @@
 GITHUB_KEY: your_application_key
 GITHUB_SECRET: your_application_secret_token
+TWITTER_CONSUMER_KEY: your_application_consumer_key
+TWITTER_CONSUMER_SECRET: your_application_consumer_secret

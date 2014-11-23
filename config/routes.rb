@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get '/auth/:provider/callback/' => 'sessions#create'
+  get 'signin'      => 'sessions#new'
+  delete '/signout' => 'sessions#destroy'
+
   mount RailsAdmin::Engine => '/yamatoji', as: 'rails_admin'
 
   devise_for :yamatojis

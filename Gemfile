@@ -15,6 +15,8 @@ gem 'unicorn'
 gem 'haml-rails'
 gem 'devise'
 gem 'rails_admin'
+gem 'omniauth-github'
+gem 'figaro'
 
 group :development do
   gem 'rb-readline'

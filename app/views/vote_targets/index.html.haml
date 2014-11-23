@@ -1,6 +1,9 @@
 %h1 Vote menu
+%p Hello, #{current_user.nickname}!
 %p Select menu below.
 
 -# TODO i18n 対応をいつかやる
 - %w(Lt Sake Food).each do |vote_target|
   = link_to "vote #{vote_target}", new_vote_path(vote_target: vote_target)
+
+= link_to 'Sign out', signout_path, method: :delete

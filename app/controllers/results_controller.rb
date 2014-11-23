@@ -7,6 +7,7 @@ class ResultsController < ApplicationController
   end
 
   def show
+    @target = VoteTarget.find(params[:id])
     @votes = VoteTarget.find(params[:id]).votes
   end
 end

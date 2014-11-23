@@ -12,6 +12,7 @@ ActiveRecord::Schema.define(version: 20141123005533) do
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "attendee_id", null: false
   end
 
   create_table "votes", force: true do |t|

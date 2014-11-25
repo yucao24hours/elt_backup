@@ -8,6 +8,16 @@
     = csrf_meta_tags
 
   %body
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          - text = fa_icon(:beer, text: "Tokyu08 - #{current_user.nickname}")
+          = link_to text, root_path, class: 'navbar-brand'
+        .navbar-collapse.collapse.navbar-right
+          %ul.nav.navbar-nav
+            %li
+              = link_to 'Sign out', signout_path, method: :delete
+
     %p.notice
       = notice
     %p.alert

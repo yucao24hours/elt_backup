@@ -1,9 +1,22 @@
 %h1 Vote menu
-%p Hello, #{current_user.nickname}!
-%p Select menu below.
 
--# TODO i18n 対応をいつかやる
-- %w(Lt Sake Food).each do |vote_target|
-  = link_to "vote #{vote_target}", new_vote_path(vote_target: vote_target)
-
-= link_to 'Sign out', signout_path, method: :delete
+.vote-menu
+  .row.centered
+    .col-md-4
+      - link = new_vote_path(vote_target: 'Lt')
+      .vote_icon
+        = link_to fa_icon(:microphone), link
+      %h4
+        = link_to 'vote LT', link
+    .col-md-4
+      - link = new_vote_path(vote_target: "Sake")
+      .vote_icon
+        = link_to fa_icon(:glass), link
+      %h4
+        = link_to 'vote Sake', link
+    .col-md-4
+      - link = new_vote_path(vote_target: 'Food')
+      .vote_icon
+        = link_to fa_icon(:cutlery), link
+      %h4
+        = link_to 'vote Food', link

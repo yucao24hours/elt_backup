@@ -229,6 +229,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   figaro
+  font-awesome-rails
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails

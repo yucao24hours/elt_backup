@@ -1,12 +1,12 @@
 = form_for(@vote) do |f|
-  %ul
-    - @vote_targets.each do |vote_target|
-      %li
+  - @vote_targets.each do |vote_target|
+    .radio
+      %label
         = f.radio_button :vote_target_id, vote_target.id
         = vote_target.title
 
-  %div
-    = f.label 'Comment(option)'
-  %div  
-    = f.text_area :comment
-  = f.submit button_label 
+  .form-group.comment
+    = f.text_area :comment, class: 'form-control', placeholder: "コメント！"
+
+  .form-group
+    = f.submit button_label, class: 'btn btn-lg btn-block btn-primary'

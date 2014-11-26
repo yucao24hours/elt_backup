@@ -1,8 +1,11 @@
 %h1 Your vote
-%div
-  you voted to:
-  = @vote.target.title
 
-%div
-  comment:
-  = @vote.comment
+%p 下記のタイトルに投票しました〜
+
+%table.table
+  %tr
+    %th タイトル
+    %td= @vote.target.title
+  %tr
+    %th コメント
+    %td= @vote.comment

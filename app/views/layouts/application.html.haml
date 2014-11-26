@@ -18,11 +18,12 @@
             %li
               = link_to 'Sign out', signout_path, method: :delete
 
-      -# TODO: アラートがなかったときのスタイルをつける？
-      %p.alert.alert-warning{role: 'alert'}
-        = notice
-      %p.alert.alert-danger{role: 'alert'}
-        = alert
+    - if notice
+      .alert.alert-warning{role: 'alert'}
+        %p= notice
+    - if alert
+      .alert.alert-danger{role: 'alert'}
+        %p= alert
 
     .container
       = yield

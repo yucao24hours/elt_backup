@@ -1,4 +1,5 @@
-ActiveRecord::Schema.define(version: 20141123005533) do
+ActiveRecord::Schema.define(version: 20141126025615) do
+
   create_table "attendees", force: true do |t|
     t.string   "nickname"
     t.string   "provider"
@@ -22,8 +23,6 @@ ActiveRecord::Schema.define(version: 20141123005533) do
     t.integer  "vote_target_id"
   end
 
-  add_index "votes", ["attendee_id"], name: "index_votes_on_attendee_id", unique: true
-
   create_table "yamatojis", force: true do |t|
     t.string   "email",               default: "", null: false
     t.string   "encrypted_password",  default: "", null: false
@@ -38,4 +37,5 @@ ActiveRecord::Schema.define(version: 20141123005533) do
   end
 
   add_index "yamatojis", ["email"], name: "index_yamatojis_on_email", unique: true
+
 end

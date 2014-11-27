@@ -16,6 +16,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn'
+gem 'zocial-rails'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

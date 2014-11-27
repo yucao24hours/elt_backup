@@ -1,9 +1,8 @@
-%h1 new vote
-%div
-  -# TODO 'target' の部分はクラスメソッドとか使って文字列展開したい(LT, SAKE, FOOD)
-  Select the target, and push the vote button!
+-# FIXME: params で取るの微妙ですかねえ…
+- vote_target = params[:vote_target]
+%h1= "vote #{vote_target}"
+
+.vote-message
+  = "下記の #{vote_target} から一つ選んで投票してください"
 
 = render 'form', button_label: 'vote'
-
-%div= link_to 'Top', vote_targets_path
-%div= link_to 'Sign out', signin_path

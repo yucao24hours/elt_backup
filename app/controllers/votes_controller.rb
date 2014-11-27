@@ -2,6 +2,7 @@ class VotesController < ApplicationController
   def new
     @vote = Vote.new
     @vote_targets = VoteTarget.where(type: params[:vote_target])
+    flash.notice = 'VoteTarget が登録されていません。管理画面から VoteTarget を登録してください' if @vote_targets.blank?
   end
 
   def create

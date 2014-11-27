@@ -1,7 +1,9 @@
-%h1 #{@type} result
-.votes
+%h1 #{@type} 投票結果！
+
+%table.table.votes
   - @targets.each do |target|
-    .vote
-      = link_to "#{target.votes.count}票 #{target.title}", result_path(target)
+    %tr.vote
+      %th= "#{target.votes.count}票"
+      %td= link_to target.title, result_path(target)
 
 -#NOTE ここは TOP へのリンクは入れなくてもいいかなと思った。もう戻る意味ないし。

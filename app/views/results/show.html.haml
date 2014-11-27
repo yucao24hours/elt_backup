@@ -1,5 +1,6 @@
 %h1 Comments for 人の名前
-%div
+
+%table.table
   - @votes.each do |vote|
-    %div
-      = vote.comment
+    %tr
+      %td= vote.comment

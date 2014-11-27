@@ -1,4 +1,4 @@
-ActiveRecord::Schema.define(version: 20141126025615) do
+ActiveRecord::Schema.define(version: 20141127173100) do
 
   create_table "attendees", force: true do |t|
     t.string   "nickname"
@@ -13,6 +13,7 @@ ActiveRecord::Schema.define(version: 20141126025615) do
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "nickname",   default: "No name"
   end
 
   create_table "votes", force: true do |t|

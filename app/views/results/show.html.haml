@@ -1,6 +1,7 @@
-%h1 Comments for 人の名前
+%h1 Comments for #{@target.title}
 
 %table.table
   - @votes.each do |vote|
-    %tr
-      %td= vote.comment
+    - if vote.comment.present?
+      %tr
+        %td= vote.comment

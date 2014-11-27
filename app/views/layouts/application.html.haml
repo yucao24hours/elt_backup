@@ -3,13 +3,28 @@
   %head
     %title Elt
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
   %body
-    %p.notice
-      = notice
-    %p.alert
-      = alert
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          - name = current_user ? " - #{current_user.nickname}" : ""
+          - text = fa_icon(:beer, text: "Tokyu08#{name}")
+          = link_to text, root_path, class: 'navbar-brand'
+        .navbar-collapse.collapse.navbar-right
+          %ul.nav.navbar-nav
+            %li
+              = link_to 'Sign out', signout_path, method: :delete
 
-    = yield
+    - if notice
+      .alert.alert-warning{role: 'alert'}
+        %p= notice
+    - if alert
+      .alert.alert-danger{role: 'alert'}
+        %p= alert
+
+    .container.under-headers
+      = yield

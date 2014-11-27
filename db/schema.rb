@@ -24,8 +24,6 @@ ActiveRecord::Schema.define(version: 20141127173100) do
     t.integer  "vote_target_id"
   end
 
-  add_index "votes", ["attendee_id"], name: "index_votes_on_attendee_id", unique: true
-
   create_table "yamatojis", force: true do |t|
     t.string   "email",               default: "", null: false
     t.string   "encrypted_password",  default: "", null: false

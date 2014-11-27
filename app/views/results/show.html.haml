@@ -1,5 +1,6 @@
 %h1 Comments for #{@target.title}
-%div
+
+%table.table
   - @votes.each do |vote|
-    %div
-      = vote.comment
+    %tr
+      %td= vote.comment

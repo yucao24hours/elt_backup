@@ -1,5 +1,7 @@
-%h1 #{@type} result
-.votes
+%h1 #{@type} 投票結果！
+
+%table.table.votes
   - @targets.each do |target|
-    .vote
-      = link_to "#{target.votes.count}票 #{target.title} by #{target.nickname}", result_path(target)
+    %tr.vote
+      %th= "#{target.votes.count}票"
+      %td= link_to "#{target.title} by #{target.nickname}", result_path(target)

@@ -1,6 +1,22 @@
 %h1 Result menu
-%p Select the target below.
 
--#TODO i18n 対応をいつかやる
-- %w(Lt Sake Food).each do |target|
-  = link_to "show #{target}", results_path(target_type: target)
+.vote-menu
+  .row.centered
+    .col-md-4
+      - link = results_path(target_type: 'Lt')
+      .vote_icon
+        = link_to fa_icon(:microphone), link
+      %h4
+        = link_to 'LT', link
+    .col-md-4
+      - link = results_path(target_type: "Sake")
+      .vote_icon
+        = link_to fa_icon(:glass), link
+      %h4
+        = link_to 'Sake', link
+    .col-md-4
+      - link = results_path(target_type: 'Food')
+      .vote_icon
+        = link_to fa_icon(:cutlery), link
+      %h4
+        = link_to 'Food', link

@@ -2,5 +2,6 @@
 
 %table.table
   - @votes.each do |vote|
-    %tr
-      %td= vote.comment
+    - if vote.comment.present?
+      %tr
+        %td= vote.comment

@@ -13,7 +13,7 @@ ActiveRecord::Schema.define(version: 20141127173100) do
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "nickname"
+    t.string   "nickname",   default: "No name"
   end
 
   create_table "votes", force: true do |t|

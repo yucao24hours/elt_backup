@@ -22,9 +22,8 @@ class VotesController < ApplicationController
   end
 
   def edit
-  end
-
-  def update
+    #XXX このアプリ、投票内容を編集 edit できない。
+    redirect_to root_path, alert: 'ごめんなさい。編集できないんです。'
   end
 
   private

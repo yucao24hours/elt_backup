@@ -3,10 +3,10 @@
     .radio
       %label
         = f.radio_button :vote_target_id, vote_target.id
-        = vote_target.title
+        = "#{vote_target.title} ／ #{vote_target.nickname}"
 
   .form-group.comment
-    = f.text_area :comment, class: 'form-control', placeholder: "コメント！"
+    = f.text_area :comment, class: 'form-control', placeholder: "コメント！(任意)"
 
   .form-group
     = f.submit button_label, class: 'btn btn-lg btn-block btn-primary'

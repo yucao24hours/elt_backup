@@ -1,7 +1,10 @@
 %h1 Comments for #{@target.title}
 
 %table.table
-  - @votes.each do |vote|
-    - if vote.comment.present?
+  - if @comments.present?
+    - @comments.compact.each do |comment|
       %tr
-        %td= vote.comment
+        %td= comment
+  - else
+    %tr
+      %td コメントはありませんでした

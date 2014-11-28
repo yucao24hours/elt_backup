@@ -8,6 +8,8 @@ class ResultsController < ApplicationController
 
   def show
     @target = VoteTarget.find(params[:id])
-    @votes = VoteTarget.find(params[:id]).votes
+
+    votes = VoteTarget.find(params[:id]).votes
+    @comments = votes.all.map {|vote| vote.comment.empty? ? nil : vote.comment}
   end
 end

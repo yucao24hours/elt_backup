@@ -4,4 +4,4 @@
   - @targets.each do |target|
     %tr.vote
       %th= "#{target.votes.count}票"
-      %td= link_to "#{target.title} ／ #{target.nickname}", result_path(target)
+      %td= link_to target.title_and_nickname, result_path(target)

@@ -3,7 +3,7 @@
     .radio
       %label
         = f.radio_button :vote_target_id, vote_target.id
-        = "#{vote_target.title} ／ #{vote_target.nickname}"
+        = vote_target.title_and_nickname
 
   .form-group.comment
     = f.text_area :comment, class: 'form-control', placeholder: "コメント！(任意)"

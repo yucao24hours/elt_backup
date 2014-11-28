@@ -10,6 +10,6 @@ class ResultsController < ApplicationController
     @target = VoteTarget.find(params[:id])
 
     votes = VoteTarget.find(params[:id]).votes
-    @comments = votes.all.map {|vote| vote.comment == '' ? nil : vote.comment}
+    @comments = votes.all.map {|vote| vote.comment.empty? ? nil : vote.comment}
   end
 end

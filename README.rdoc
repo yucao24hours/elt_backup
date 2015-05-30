@@ -1,2 +1,1 @@
-== elt
-This application was created for Tokyu.rb. Using this, you can choose and vote the LT etc that you like the best! :beer: :computer: :meat_on_bone:
+:beer: :computer: :meat_on_bone:

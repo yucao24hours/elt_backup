@@ -23,6 +23,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development do
   gem 'quiet_assets'
   gem 'rb-readline'
+  gem 'rubycritic', require: false
   gem 'spring'
   gem 'sqlite3', '1.3.9'
   gem 'xray-rails'
@@ -31,8 +32,8 @@ end
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'pry-rails'
   gem 'pry'
+  gem 'pry-rails'
 end
 
 group :production do
